@@ -1,0 +1,180 @@
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+form  {
+    margin-top: 30px;
+}
+textarea {
+    max-width: 100%;
+}
+#page-wrap {
+    padding-top: 50px;
+}
+.main-holder {
+    position: relative;
+    padding: 10px 20px 30px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    border: .2rem solid #f7f7f9;
+}
+.form-group {
+    margin-bottom: 20px;
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 10px 20px;
+}
+.form-group.additional-input-holder {
+    border: none;
+}
+.form-group.Not-answered {
+    background: rgba(253, 0, 0, 0.19);
+}
+#check-person-form .additional-input-holder .form-group {
+    border: none;
+}
+.form-group label{
+    display: block;
+    font-size: 15px;
+    line-height: 25px;
+}
+.form-group small {
+    line-height: 10px;
+}
+.question {
+    font-size: 20px;
+    color: #118eca;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.question span.attention {
+    color: #f30d0d;
+}
+.additional-input-holder {
+    margin-top: 20px;
+}
+.additional-input-holder label {
+    color: #ee752f;
+}
+.answer-holder > *{
+    margin-bottom: 10px;
+}
+.answer-holder .row label{
+    line-height: 28px;
+}
+.form-group.row > div {
+    margin-bottom: 10px;
+}
+
+.check-person-form-holder,
+.main-survey-holder{
+    display: none;
+}
+.attention-message {
+    margin: 15px 0;
+    padding: 30px 30px;
+    background: #ffec0b;
+    color: black;
+    font-size: 25px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+#steps-nav-holder {}
+
+.survey-steps {
+    margin: 25px 0;
+}
+
+.survey-steps > li {
+    display: inline-block;
+    position: relative;
+    overflow: visible;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+.survey-steps > li a{
+    color: white;
+}
+.survey-steps > li + li {
+    margin-left: 0;
+}
+.survey-steps > li:first-child {
+    border-left: 0;
+}
+.survey-steps > li:first-child a {
+    border-radius: 5px 0 0 5px;
+}
+.survey-steps > li:last-child {
+    border-right: 0;
+}
+.survey-steps > li:last-child a {
+    border-radius: 0 5px 5px 0;
+}
+.survey-steps > li a {
+    border-radius: 0;
+    background-color: #eee;
+}
+.survey-steps > li:not(:last-child) a:after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    right: -20px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent #eee;
+    z-index: 150;
+}
+.survey-steps > li:not(:first-child) a:before {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: -20px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 0 20px 20px;
+    border-color: #eee #eee #eee transparent;
+    z-index: 150;
+}
+.survey-steps > li.active:not(:last-child) a:after {
+    border-color: transparent transparent transparent #428bca;
+}
+.survey-steps > li.active:not(:first-child) a:before {
+    border-color: #428bca #428bca #428bca transparent;
+}
+.survey-steps > li.active a {
+    background-color: #428bca;
+}
+.survey-steps > li.done:not(:last-child) a:after {
+    border-color: transparent transparent transparent #39c708;
+}
+.survey-steps > li.done:not(:first-child) a:before {
+    border-color: #39c708 #39c708 #39c708 transparent;
+}
+.survey-steps > li.done a {
+    background-color: #39c708;
+}
+.survey-steps > li.done.editing:not(:last-child) a:after {
+    border-color: transparent transparent transparent #c74c33;
+}
+.survey-steps > li.done.editing:not(:first-child) a:before {
+    border-color: #c74c33 #c74c33 #c74c33 transparent;
+}
+.survey-steps > li.done.editing a {
+    background-color: #c74c33;
+}
+
+#validation-error-modal .modal-body{
+    background: rgba(253, 0, 0, 0.19);
+    text-align: center;
+}
+
+
+footer {
+    background: rgba(91, 187, 236, 0.72);
+    padding: 20px 0 10px;
+    margin-top: 20px;
+}

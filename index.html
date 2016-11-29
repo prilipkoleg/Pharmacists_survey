@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questions List</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- /Styles -->
+</head>
+<body>
+
+    <div id="page-wrap">
+
+        <header>
+            <div class="container">
+                <div class="jumbotron hero-spacer">
+                    <h1>Anti-TNF drug survey</h1>
+                    <p>Market research ...</p>
+                    <p><a id="start" class="btn btn-primary btn-large">Start!</a></p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+
+                <!-- *** First form *** -->
+                <div class="check-person-form-holder main-holder">
+
+                    <h1>First -> Check Person Form</h1>
+
+                    <form id="check-person-form">
+                        <div class="form-group question-1">
+                            <div class="question">In which country are you a practicing pharmacist?</div>
+                            <label for="pharmacist-country"></label>
+                            <select class="form-control" name="pharmacist-country" id="pharmacist-country">
+                                <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+                                <option value="Macedonia">Macedonia</option>
+                                <option value="Moldova">Moldova</option>
+                                <option value="Montenegro">Montenegro</option>
+                                <option value="Russia">Russia</option>
+                                <option value="Serbia">Serbia</option>
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="Algeria">Algeria</option>
+                                <option value="Iran">Iran</option>
+                                <option value="Iraq">Iraq</option>
+                                <option value="Lebanon">Lebanon</option>
+                                <option value="South Africa">South Africa</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <small id="pharmacist-countryHelp" class="form-text text-muted">Only one answer possible.</small>
+                            <div class="additional-input-holder hidden" data-contact="pharmacist-country">
+                                <label for="other-country-input">What country?</label>
+                                <input class="form-control" type="text" name="other-country-input" id="other-country-input" placeholder="Country">
+                            </div>
+                        </div>
+                        <div class="form-group question-2">
+                            <div class="question">For how long have you been a practicing pharmacist?</div>
+                            <label for="pharmacist-experience"></label>
+                            <select class="form-control" name="pharmacist-experience" id="pharmacist-experience">
+                                <option value="< 2 years">< 2 years</option>
+                                <option value="2-5 years">2-5 years</option>
+                                <option value="> 5 years">> 5 years</option>
+                            </select>
+                        </div>
+                        <div class="form-group question-3">
+                            <div class="question">Which of the following drugs does your pharmacy sell/distribute?</div>
+                            <!--<label for="drugs-distribute"></label>
+                            <select class="form-control" multiple="multiple" name="drugs-distribute" id="drugs-distribute">
+                                <option value="Enbrel (etanercept)">Enbrel (etanercept)</option>
+                                <option value="Remicade (infliximab)">Remicade (infliximab)</option>
+                                <option value="Humira (adalimumab)">Humira (adalimumab)</option>
+                                <option value="None of the above">None of the above</option>
+                            </select>-->
+                            <div class="checkbox">
+                                <label for="drugs-distribute-enbrel">
+                                    <input type="checkbox" name="drugs-distribute"
+                                           id="drugs-distribute-enbrel" value="Enbrel (etanercept)">
+                                    Enbrel (etanercept)
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label for="drugs-distribute-remicade">
+                                    <input type="checkbox" name="drugs-distribute"
+                                           id="drugs-distribute-remicade" value="Remicade (infliximab)">
+                                    Remicade (infliximab)
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label for="drugs-distribute-humira">
+                                    <input type="checkbox" name="drugs-distribute"
+                                           id="drugs-distribute-humira" value="Humira (adalimumab)">
+                                    Humira (adalimumab)
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label for="drugs-distribute-none">
+                                    <input type="checkbox" name="drugs-distribute-none"
+                                           id="drugs-distribute-none" value="None of the above">
+                                    None of the above
+                                </label>
+                            </div>
+                            <small id="drugs-distributeHelp" class="form-text text-muted">Multiple answers available.</small>
+                        </div>
+                        <fieldset class="form-group question-4">
+                            <div class="question">Are you aware/familiar with prices for the drugs mentioned above?</div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="familiar-with-prices" id="familiar-with-prices1" value="Yes" checked="">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="familiar-with-prices" id="familiar-with-prices2" value="No">
+                                    No
+                                </label>
+                            </div>
+                        </fieldset>
+                        <div class="form-group question-5">
+                            <div class="question">Do you sell/distribute any biosimilars for etanercept, infliximab, or adalimumab?</div>
+                            <!--<label for="prioritize-pharmacists-stock"></label>
+                            <select class="form-control" multiple="multiple" name="prioritize-pharmacists-stock" id="prioritize-pharmacists-stock">
+                                <option value="etanercept biosimilar">etanercept biosimilar</option>
+                                <option value="infliximab biosimilar">infliximab biosimilar</option>
+                                <option value="adalimumab biosimilar">adalimumab biosimilar</option>
+                                <option value="No">No</option>
+                            </select>-->
+
+                            <div class="checkbox">
+                                <label for="pharmacists-stock-etanercept">
+                                    <input type="checkbox" name="pharmacists-stock"
+                                           id="pharmacists-stock-etanercept" value="etanercept biosimilar">
+                                    etanercept biosimilar
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label for="pharmacists-stock-infliximab">
+                                    <input type="checkbox" name="pharmacists-stock"
+                                           id="pharmacists-stock-infliximab" value="infliximab biosimilar">
+                                    infliximab biosimilar
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label for="pharmacists-stock-adalimumab">
+                                    <input type="checkbox" name="pharmacists-stock"
+                                           id="pharmacists-stock-adalimumab" value="adalimumab biosimilar">
+                                    adalimumab biosimilar
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label for="pharmacists-stock-no">
+                                    <input type="checkbox" name="pharmacists-stock"
+                                           id="pharmacists-stock-no" value="No">
+                                    No
+                                </label>
+                            </div>
+                            <small id="prioritize-pharmacists-stockHelp" class="form-text text-muted">Multiple answers available.</small>
+
+                            <div class="form-group question-6 additional-input-holder" data-contact="prioritize-pharmacists-stock">
+                                <div class="question">What is the name of the etanercept, infliximab, and/or adalimumab biosimilar that you sell?</div>
+                                <div class="row">
+                                    <label for="etanercept-biosimilar" class="col-sm-3 col-form-label">etanercept biosimilar</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="etanercept-biosimilar" name="etanercept-biosimilar" placeholder="">
+                                    </div>
+                                    <label for="infliximab-biosimilar" class="col-sm-3 col-form-label">infliximab  biosimilar</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="infliximab-biosimilar" name="infliximab-biosimilar" placeholder="">
+                                    </div>
+                                    <label for="adalimumab-biosimilar" class="col-sm-3 col-form-label">adalimumab biosimilar</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="adalimumab-biosimilar" name="adalimumab-biosimilar" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+                <!-- *** First form END *** -->
+
+                <!-- *** Steps holder *** -->
+                <div class="main-survey-holder main-holder">
+
+                    <h1>Second -> Survey Steps</h1>
+
+                    <div id="steps-nav-holder">
+
+                        <ul class="nav survey-steps">
+                            <li><a>Markety Type</a></li>
+                            <li><a>Availability of contracting</a></li>
+                            <li><a>anti-TNF prices</a></li>
+                            <li><a>Reimbursement of anti-TNFs</a></li>
+                            <li><a>Information about PAPs</a></li>
+                            <li><a>Future risk landscape</a></li>
+                        </ul>
+
+                        <ul class="prev-next-nav pager hidden">
+                            <li><a class="prev" href="#">Prev</a></li>
+                            <li><a class="next" href="#">Next</a></li>
+                        </ul>
+
+                    </div>
+
+                        <div class="tab-content">
+                            <div class="tab-panel" id="tab1">
+
+                                <form action="" id="step1" class="step-form">
+
+                                    <!-- Step1 q1 -->
+                                    <div class="form-group question-1">
+                                        <div class="question">If you had to estimate, what percentage of the population would you say is covered by the public healthcare system in your country?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <!--<label for="step1Q1-percent">number between 1 and 100 in %</label>-->
+                                                <!--<input type="number" class="form-control" name="step1Q1-percent" id="step1Q1-percent">-->
+                                                <fieldset>
+                                                    <small id="step1Q1-radioHelp">please use your best judgement if possible e.g.</small>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q1-radio" id="step1Q1-radio1" value="25%">
+                                                            25%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q1-radio" id="step1Q1-radio2" value="33%">
+                                                            33%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q1-radio" id="step1Q1-radio3" value="50%">
+                                                            50%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q1-radio" id="step1Q1-radio4" value="66%">
+                                                            66%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q1-radio" id="step1Q1-radio5" value="75% and more">
+                                                            75% and more
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q1-radio" id="step1Q1-radio6" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q1-radio" id="step1Q1-radio7" value="There is no public healthcare system/coverage">
+                                                            There is no public healthcare system/coverage
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step1Q1-comments">Additional comments:</label>
+                                                <textarea id="step1Q1-comments" name="step1Q1-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step1 q1 -->
+
+                                    <!-- Step1 q2 -->
+                                    <div class="form-group question-2 toggle-by-first-q">
+                                        <div class="question">Would you say the public healthcare system has a large coverage of drugs (including not only generics but  also specialized branded products for rheumatology, oncology, etc)?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q2-radio" id="step1Q2-radio1" value="Yes, it has coverage for many different drugs including branded products">
+                                                            Yes, it has coverage for many different drugs including branded products
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q2-radio" id="step1Q2-radio2" value="No, it mostly covers only generic drugs">
+                                                            No, it mostly covers only generic drugs
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step1Q2-comments">Additional comments:</label>
+                                                <textarea id="step1Q2-comments" name="step1Q2-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step1 q2 -->
+
+                                    <!-- Step1 q3 -->
+                                    <div class="form-group question-3">
+                                        <div class="question">If you had to estimate, what percentage of people in your country have private insurance?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <!--<label for="step1Q3-percent">number between 1 and 100 in %</label>-->
+                                                <!--<input type="number" class="form-control" name="step1Q3-percent" id="step1Q3-percent">-->
+                                                <!--<div class="form-check">-->
+                                                    <!--<label class="form-check-label">-->
+                                                        <!--<input type="checkbox" class="form-check-input" name="step1Q3-checkbox" id="step1Q3-checkbox" value="I have no idea">-->
+                                                        <!--I have no idea-->
+                                                    <!--</label>-->
+                                                <!--</div>-->
+                                                <fieldset>
+                                                    <small id="step1Q3-radioHelp">please use your best judgement if possible e.g.</small>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q3-radio" id="step1Q3-radio1" value="less than 25%">
+                                                            less than 25%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q3-radio" id="step1Q3-radio2" value="25%">
+                                                            25%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q3-radio" id="step1Q3-radio3" value="33%">
+                                                            33%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q3-radio" id="step1Q3-radio4" value="50%">
+                                                            50%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q3-radio" id="step1Q3-radio5" value="66%">
+                                                            66%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q3-radio" id="step1Q3-radio6" value="75% and more">
+                                                            75% and more
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q3-radio" id="step1Q3-radio7" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step1Q3-comments">Additional comments:</label>
+                                                <textarea id="step1Q3-comments" name="step1Q3-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step1 q3 -->
+
+                                    <!-- Step1 q4 -->
+                                    <div class="form-group question-4">
+                                        <div class="question">If you had to estimate, what percentage of people pay for drugs out of pocket?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <!--<label for="step1Q4-percent">number between 1 and 100 in %</label>-->
+                                                <!--<input type="number" class="form-control col-md-2" name="step1Q4-percent" id="step1Q4-percent">-->
+                                                <!--<div class="form-check">-->
+                                                    <!--<label class="form-check-label">-->
+                                                        <!--<input type="checkbox" class="form-check-input" name="step1Q4-checkbox" id="step1Q4-checkbox" value="I have no idea">-->
+                                                        <!--I have no idea-->
+                                                    <!--</label>-->
+                                                <!--</div>-->
+                                                <fieldset>
+                                                    <small id="step1Q4-radioHelp">please use your best judgement if possible e.g.</small>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q4-radio" id="step1Q4-radio1" value="less than 25%">
+                                                            less than 25%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q4-radio" id="step1Q4-radio2" value="25%">
+                                                            25%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q4-radio" id="step1Q4-radio3" value="33%">
+                                                            33%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q4-radio" id="step1Q4-radio4" value="50%">
+                                                            50%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q4-radio" id="step1Q4-radio5" value="66%">
+                                                            66%
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q4-radio" id="step1Q4-radio6" value="75% and more">
+                                                            75% and more
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step1Q4-radio" id="step1Q4-radio7" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step1Q4-comments">Additional comments:</label>
+                                                <textarea id="step1Q4-comments" name="step1Q4-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step1 q4 -->
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+
+                            </div>
+                            <div class="tab-panel" id="tab2">
+
+                                <form action="" id="step2" class="step-form">
+
+                                    <!-- Step2 q1 -->
+                                    <div class="form-group question-1">
+                                        <div class="question">Is it common for the government of your country to have contracts or negotiations with drug companies to get lower prices for drugs?</div>
+                                        <p><em>For example, through direct discounts or price volume agreements or through a tender where the government agrees to buy a certain amount of a drug at a discounted price.</em></p>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step2Q1-radio" id="step2Q1-radio1" value="Yes">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step2Q1-radio" id="step2Q1-radio2" value="No">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step2Q1-radio" id="step2Q1-radio3" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step2Q1-comments">Additional comments:</label>
+                                                <textarea id="step2Q1-comments" name="step2Q1-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step2 q1 -->
+
+                                    <!-- Step2 q2 -->
+                                    <div class="form-group question-2">
+                                        <div class="question">Is it common for pharmacies to directly negotiate contracts with  drug companies?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step2Q2-radio" id="step2Q2-radio1" value="Yes">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step2Q2-radio" id="step2Q2-radio2" value="No">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step2Q2-radio" id="step2Q2-radio3" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step2Q2-comments">Additional comments:</label>
+                                                <textarea id="step2Q2-comments" name="step2Q2-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step2 q2 -->
+
+                                    <!-- Step2 q3 -->
+                                    <div class="form-group question-3">
+                                        <div class="question">Is it common for hospitals to directly negotiate contracts with  drug companies?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step2Q3-radio" id="step2Q3-radio1" value="Yes">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step2Q3-radio" id="step2Q3-radio2" value="No">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step2Q3-radio" id="step2Q3-radio3" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step2Q3-comments">Additional comments:</label>
+                                                <textarea id="step2Q3-comments" name="step2Q3-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step2 q3 -->
+
+                                    <!-- Step2 q4 Additional -->
+                                    <div class="form-group question-4 hidden additional-question">
+                                        <div class="question ">In general, are contracts or negotiated discounts (final net price after all discounts) confidential or publically available?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step2Q4-radio" id="step2Q4-radio1" value="Confidential">
+                                                            Confidential
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step2Q4-radio" id="step2Q4-radio2" value="Publically available">
+                                                            Publically available
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step2Q4-radio" id="step2Q4-radio3" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step2Q4-comments">Additional comments:</label>
+                                                <textarea id="step2Q4-comments" name="step2Q4-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step2 q4 Additional -->
+
+                                    <!-- Step2 q5 -->
+                                    <div class="form-group question-5">
+                                        <div class="question">Does your pharmacy receive a discount on the  price of etanercept (e.g. Enbrel), infliximab (e.g. Remicade) or  adalimumab (e.g. Humira)?</div>
+                                        <p><em>If yes, please specify how much (as a percentage for each product)</em></p>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" name="step2Q5-checkbox" id="step2Q5-checkbox" value="We do not receive discounts for any of the drugs mentioned">
+                                                        We do not receive discounts for any of the drugs mentioned
+                                                    </label>
+                                                </div>
+
+                                                <div class="row">
+                                                    <label for="step2Q5-enbrel" class="col-sm-3 col-form-label">Enbrel, %</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step2Q5-enbrel" name="step2Q5-enbrel" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step2Q5-etanercept" class="col-sm-3 col-form-label">etanercept biosimilar, %</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step2Q5-etanercept" name="step2Q5-etanercept" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step2Q5-remicade" class="col-sm-3 col-form-label">Remicade, %</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step2Q5-remicade" name="step2Q5-remicade" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step2Q5-infliximab" class="col-sm-3 col-form-label">infliximab biosimilar, %</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step2Q5-infliximab" name="step2Q5-infliximab" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step2Q5-humira" class="col-sm-3 col-form-label">Humira, %</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step2Q5-humira" name="step2Q5-humira" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step2Q5-adalimumab" class="col-sm-3 col-form-label">adalimumab biosimilar, %</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step2Q5-adalimumab" name="step2Q5-adalimumab" placeholder="">
+                                                    </div>
+                                                </div>
+
+                                                <label for="step2Q5-comments">Additional comments:</label>
+                                                <textarea id="step2Q5-comments" name="step2Q5-comments" class="form-control" rows="5" maxlength="500"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step2 q5 -->
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+
+                            </div>
+                            <div class="tab-panel" id="tab3">
+
+                                <form action="" id="step3" class="step-form">
+
+                                    <!-- Step3 q1 -->
+                                    <div class="form-group question-1">
+                                        <div class="question">What price does your pharmacy purchase and sell Enbrel (etanercept) for?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <div class="row">
+                                                    <label for="step3Q1-purchase" class="col-sm-3 col-form-label">Purchase, $</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step3Q1-purchase" name="step3Q1-purchase" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step3Q1-sell" class="col-sm-3 col-form-label">Sell, $</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step3Q1-sell" name="step3Q1-sell" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step3Q1-quantity" class="col-sm-3 col-form-label">Quantity:</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="step3Q1-quantity" name="step3Q1-quantity" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" name="step3Q1-checkbox" id="step3Q1-checkbox" value="We do not sell/distribute Enbrel">
+                                                        We do not sell/distribute Enbrel
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step3 q1 -->
+
+                                    <!-- Step3 q2 -->
+                                    <div class="form-group question-2">
+                                        <div class="question">What price does your pharmacy purchase and sell the etanercept biosimilar for?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <div class="row">
+                                                    <label for="step3Q2-purchase" class="col-sm-3 col-form-label">Purchase, $</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step3Q2-purchase" name="step3Q2-purchase" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step3Q2-sell" class="col-sm-3 col-form-label">Sell, $</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step3Q2-sell" name="step3Q2-sell" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step3Q2-quantity" class="col-sm-3 col-form-label">Name, quantity:</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="step3Q2-quantity" name="step3Q2-quantity" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" name="step3Q2-checkbox" id="step3Q2-checkbox" value="We do not sell/distribute the etanercept biosimilar">
+                                                        We do not sell/distribute the etanercept biosimilar
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step3 q2 -->
+
+                                    <!-- Step3 q3 -->
+                                    <div class="form-group question-3">
+                                        <div class="question">What price does your pharmacy purchase and sell Remicade (infliximab) for?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <div class="row">
+                                                    <label for="step3Q3-purchase" class="col-sm-3 col-form-label">Purchase, $</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step3Q3-purchase" name="step3Q3-purchase" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step3Q3-sell" class="col-sm-3 col-form-label">Sell, $</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step3Q3-sell" name="step3Q3-sell" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step3Q3-quantity" class="col-sm-3 col-form-label">Quantity:</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="step3Q3-quantity" name="step3Q3-quantity" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" name="step3Q3-checkbox" id="step3Q3-checkbox" value="We do not sell/distribute Remicade">
+                                                        We do not sell/distribute Remicade
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step3 q3 -->
+
+                                    <!-- Step3 q4 -->
+                                    <div class="form-group question-4">
+                                        <div class="question">What price does your pharmacy purchase and sell the infliximab biosimilar for?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <div class="row">
+                                                    <label for="step3Q4-purchase" class="col-sm-3 col-form-label">Purchase, $</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step3Q4-purchase" name="step3Q3-purchase" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step3Q4-sell" class="col-sm-3 col-form-label">Sell, $</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step3Q4-sell" name="step3Q4-sell" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step3Q4-quantity" class="col-sm-3 col-form-label">Name, quantity:</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="step3Q4-quantity" name="step3Q4-quantity" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" name="step3Q4-checkbox" id="step3Q4-checkbox" value="We do not sell/distribute the infliximab biosimilar">
+                                                        We do not sell/distribute the infliximab biosimilar
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step3 q4 -->
+
+                                    <!-- Step3 q5 -->
+                                    <div class="form-group question-5">
+                                        <div class="question">What price does your pharmacy purchase and sell Humira (adalimumab) for?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <div class="row">
+                                                    <label for="step3Q5-purchase" class="col-sm-3 col-form-label">Purchase, $</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step3Q5-purchase" name="step3Q5-purchase" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step3Q5-sell" class="col-sm-3 col-form-label">Sell, $</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step3Q5-sell" name="step3Q5-sell" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step3Q5-quantity" class="col-sm-3 col-form-label">Quantity:</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="step3Q5-quantity" name="step3Q5-quantity" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" name="step3Q5-checkbox" id="step3Q5-checkbox" value="We do not sell/distribute Humira">
+                                                        We do not sell/distribute Humira
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step3 q5 -->
+
+                                    <!-- Step3 q6 -->
+                                    <div class="form-group question-6">
+                                        <div class="question">What price does your pharmacy purchase and sell the adalimumab biosimilar for?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <div class="row">
+                                                    <label for="step3Q6-purchase" class="col-sm-3 col-form-label">Purchase, $</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step3Q6-purchase" name="step3Q6-purchase" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step3Q6-sell" class="col-sm-3 col-form-label">Sell, $</label>
+                                                    <div class="col-sm-3">
+                                                        <input type="number" class="form-control" id="step3Q6-sell" name="step3Q6-sell" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="step3Q6-quantity" class="col-sm-3 col-form-label">Name, quantity:</label>
+                                                    <div class="col-sm-4">
+                                                        <input type="text" class="form-control" id="step3Q6-quantity" name="step3Q6-quantity" placeholder="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" name="step3Q6-checkbox" id="step3Q6-checkbox" value="We do not sell/distribute Humira">
+                                                        We do not sell/distribute Humira
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step3 q6 -->
+
+                                    <!-- Step3 q7 -->
+                                    <div class="form-group question-7">
+                                        <div class="question">If you had to estimate, which anti-TNF therapy do you sell the most of?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step3Q7-radio" id="step3Q7-radio1" value="Enbrel (etanercept)">
+                                                            Enbrel (etanercept)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step3Q7-radio" id="step3Q7-radio2" value="Remicade (infliximab)">
+                                                            Remicade (infliximab)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step3Q7-radio" id="step3Q7-radio3" value="Humira (adalimumab)">
+                                                            Humira (adalimumab)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step3Q7-radio" id="step3Q7-radio4" value="etanercept biosimilar">
+                                                            etanercept biosimilar
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step3Q7-radio" id="step3Q7-radio5" value="infliximab biosimilar">
+                                                            infliximab biosimilar
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step3Q7-radio" id="step3Q7-radio6" value="adalimumab biosimilar">
+                                                            adalimumab biosimilar
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step3Q7-radio" id="step3Q7-radio7" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+
+                                                <label for="step3Q7-comments">Additional comments:</label>
+                                                <textarea id="step3Q7-comments" name="step3Q7-comments" class="form-control" rows="5" maxlength="500"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step3 q7 -->
+
+                                    <!-- Step3 q8 -->
+                                    <div class="form-group question-8">
+                                        <div class="question">Is there anything additional you would like to say regarding the prices or sales of anti-TNF therapies?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" name="step3Q8-checkbox" id="step3Q8-checkbox" value="Nothing to add">
+                                                        Nothing to add
+                                                    </label>
+                                                </div>
+                                                <label for="step3Q8"></label>
+                                                <textarea id="step3Q8" name="step3Q8" class="form-control" rows="5" maxlength="500"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step3 q8 -->
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+
+                            </div>
+                            <div class="tab-panel" id="tab4">
+
+                                <form action="" id="step4" class="step-form">
+
+                                    <!-- Step4 q1 -->
+                                    <div class="form-group question-1">
+                                        <div class="question">Are Enbrel, Remicade, and/or Humira reimbursed/funded in your country?</div>
+                                        <p><em>Please specificy which ones are reimbursed in the additioinal comments</em></p>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q1-radio" id="step4Q1-radio1" value="Yes (by Private insurance only)">
+                                                            Yes (by Private insurance only)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q1-radio" id="step4Q1-radio2" value="Yes (by Public and Private insurance)">
+                                                            Yes (by Public and Private insurance)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q1-radio" id="step4Q1-radio3" value="No">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q1-radio" id="step4Q1-radio4" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step4Q1-comments">Additional comments:</label>
+                                                <textarea id="step4Q1-comments" name="step4Q1-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step4 q1 -->
+
+                                    <!-- Step4 q2 -->
+                                    <div class="form-group question-2">
+                                        <div class="question">Are biosimilars for etanercept, infliximab, and/or adalimumab reimbursed/funded in your country?</div>
+                                        <p><em>Please specificy which ones are reimbursed in the additioinal comments</em></p>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q2-radio" id="step4Q2-radio1" value="Yes (by Private insurance only)">
+                                                            Yes (by Private insurance only)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q2-radio" id="step4Q2-radio2" value="Yes (by Public and Private insurance)">
+                                                            Yes (by Public and Private insurance)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q2-radio" id="step4Q2-radio3" value="No">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q2-radio" id="step4Q2-radio4" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q2-radio" id="step4Q2-radio5" value="There are no biosimilars available">
+                                                            There are no biosimilars available
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step4Q2-comments">Additional comments:</label>
+                                                <textarea id="step4Q2-comments" name="step4Q2-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step4 q2 -->
+
+                                    <!-- Step4 q3 Additional -->
+                                    <div class="form-group question-3 hidden additional-question">
+                                        <div class="question">What indications are the above mentioned drugs (Enbrel, Remicade, Humira, and/or biosimilars) reimbursed for?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q3-radio" id="step4Q3-radio1" value="Placque Psoriasis Only">
+                                                            Placque Psoriasis Only
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q3-radio" id="step4Q3-radio2" value="Psoriatic Arthritis Only">
+                                                            Psoriatic Arthritis Only
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q3-radio" id="step4Q3-radio3" value="For both indications">
+                                                            For both indications
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step4Q3-radio" id="step4Q3-radio4" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step4Q3-comments">Additional comments:</label>
+                                                <textarea id="step4Q3-comments" name="step4Q3-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step4 q3 Additional -->
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+
+                            </div>
+                            <div class="tab-panel" id="tab5">
+
+                                <div class="attention-message">Patient Access programs are programs that the pharmaceutical companies establish for patients buying products out of pocket. These programs are meant to reduce the economic burden for patients. These programs could be in the form of buy 3 get 1 free for example.</div>
+
+                                <form action="" id="step5" class="step-form">
+
+                                    <!-- Step5 q1 -->
+                                    <div class="form-group question-1">
+                                        <div class="question">Does your country have any patient access programs for patients buying pharmaceutical drugs out of Pocket?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step5Q1-radio" id="step5Q1-radio1" value="Yes">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step5Q1-radio" id="step5Q1-radio2" value="No">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step5Q1-radio" id="step5Q1-radio3" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step5Q1-comments">Additional comments:</label>
+                                                <textarea id="step5Q1-comments" name="step5Q1-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step5 q1 -->
+
+                                    <!-- Step5 q2 -->
+                                    <div class="form-group question-2">
+                                        <div class="question">Are there patient access programs specifically for anti-TNF drugs (Enbrel (etanercept), Remicade (infliximab) or Humira (adalimumab))?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step5Q2-radio" id="step5Q2-radio1" value="Yes">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step5Q2-radio" id="step5Q2-radio2" value="No">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step5Q2-radio" id="step5Q2-radio3" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step5Q2-comments">Additional comments:</label>
+                                                <textarea id="step5Q2-comments" name="step5Q2-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step5 q2 -->
+
+                                    <!-- Step5 q3 Additional -->
+                                    <div class="form-group question-3 hidden additional-question">
+                                        <div class="question">What kind of program is in place for the drug(s)?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <label for="step5Q3-enbrel">Enbrel (etanercept)</label>
+                                                <input type="text" class="form-control" name="step5Q3-enbrel" id="step5Q3-enbrel">
+                                                <label for="step5Q3-humira">Humira (adalimumab)</label>
+                                                <input type="text" class="form-control" name="step5Q3-humira" id="step5Q3-humira">
+                                                <label for="step5Q3-remicade">Remicade (infliximab)</label>
+                                                <input type="text" class="form-control" name="step5Q3-remicade" id="step5Q3-remicade">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step5 q3 Additional -->
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+
+                            </div>
+                            <div class="tab-panel" id="tab6">
+
+                                <form action="" id="step6" class="step-form">
+
+                                    <!-- Step6 q1 -->
+                                    <div class="form-group question-1">
+                                        <div class="question">Do you expect there to be any changes in the way your country reimburses/funds drugs?
+                                            <span class="attention">Please describe in additional comments</span>.</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step6Q1-radio" id="step6Q1-radio1" value="Yes">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step6Q1-radio" id="step6Q1-radio2" value="No">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step6Q1-radio" id="step6Q1-radio3" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step6Q1-comments">Additional comments:</label>
+                                                <textarea id="step6Q1-comments" name="step6Q1-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step6 q1 -->
+
+                                    <!-- Step6 q2 -->
+                                    <div class="form-group question-2">
+                                        <div class="question">Do you expect there to be a large increase in biosimilars offered during the  next few years?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <fieldset>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step6Q2-radio" id="step6Q2-radio1" value="Yes">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step6Q2-radio" id="step6Q2-radio2" value="No">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="radio" class="form-check-input" name="step6Q2-radio" id="step6Q2-radio3" value="I have no idea">
+                                                            I have no idea
+                                                        </label>
+                                                    </div>
+                                                </fieldset>
+                                                <label for="step6Q2-comments">Additional comments:</label>
+                                                <textarea id="step6Q2-comments" name="step6Q2-comments" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step6 q2 -->
+
+                                    <!-- Step6 q3 Additional -->
+                                    <div class="form-group question-3">
+                                        <div class="question">Is there anything additional you would like to say regarding potential future changes to the healthcare system in you country?</div>
+
+                                        <div class="row">
+                                            <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <label for="step6Q3"></label>
+                                                <textarea id="step6Q3" name="step6Q3" class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /Step6 q3 Additional -->
+
+                                    <button type="submit" class="btn btn-primary">Finish</button>
+                                </form>
+
+                            </div>
+
+                            <div class="finish-message hidden">
+                                <h1 class="text-center">Thank!</h1>
+                                <p class="text-center">Some description!</p>
+                            </div>
+
+                        </div>
+
+
+                </div>
+                <!-- *** Second steps form END*** -->
+
+                <div id="terminate-message" class="message hidden">
+                    <div class="container">
+                        <div class="jumbotron hero-spacer">
+                            <h1>Or show some content like this!</h1>
+                            <p>This is small description...</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>&copy;2016 Questions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div id="terminate-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Terminate header</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>If this person not for us.</h3>
+                    <p>We can show terminate modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="step6Q1-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Terminate header</h4>
+                </div>
+                <div class="modal-body">
+                    <h3></h3>
+                    <p>Please describe in additional comments - why?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="validation-error-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Validation Error</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="message-holder"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /Modals -->
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./assets/js/App.js"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+    <!-- /Scripts -->
+
+</body>
+</html>
