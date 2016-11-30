@@ -601,37 +601,37 @@
                                                 <div class="row">
                                                     <label for="step2Q5-enbrel" class="col-sm-3 col-form-label">Enbrel, %</label>
                                                     <div class="col-sm-3">
-                                                        <input type="number" class="form-control" id="step2Q5-enbrel" name="step2Q5-enbrel" placeholder="">
+                                                        <input type="text" class="form-control" id="step2Q5-enbrel" name="step2Q5-enbrel">
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <label for="step2Q5-etanercept" class="col-sm-3 col-form-label">etanercept biosimilar, %</label>
                                                     <div class="col-sm-3">
-                                                        <input type="number" class="form-control" id="step2Q5-etanercept" name="step2Q5-etanercept" placeholder="">
+                                                        <input type="text" class="form-control" id="step2Q5-etanercept" name="step2Q5-etanercept" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <label for="step2Q5-remicade" class="col-sm-3 col-form-label">Remicade, %</label>
                                                     <div class="col-sm-3">
-                                                        <input type="number" class="form-control" id="step2Q5-remicade" name="step2Q5-remicade" placeholder="">
+                                                        <input type="text" class="form-control" id="step2Q5-remicade" name="step2Q5-remicade" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <label for="step2Q5-infliximab" class="col-sm-3 col-form-label">infliximab biosimilar, %</label>
                                                     <div class="col-sm-3">
-                                                        <input type="number" class="form-control" id="step2Q5-infliximab" name="step2Q5-infliximab" placeholder="">
+                                                        <input type="text" class="form-control" id="step2Q5-infliximab" name="step2Q5-infliximab" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <label for="step2Q5-humira" class="col-sm-3 col-form-label">Humira, %</label>
                                                     <div class="col-sm-3">
-                                                        <input type="number" class="form-control" id="step2Q5-humira" name="step2Q5-humira" placeholder="">
+                                                        <input type="text" class="form-control" id="step2Q5-humira" name="step2Q5-humira" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <label for="step2Q5-adalimumab" class="col-sm-3 col-form-label">adalimumab biosimilar, %</label>
                                                     <div class="col-sm-3">
-                                                        <input type="number" class="form-control" id="step2Q5-adalimumab" name="step2Q5-adalimumab" placeholder="">
+                                                        <input type="text" class="form-control" id="step2Q5-adalimumab" name="step2Q5-adalimumab" placeholder="">
                                                     </div>
                                                 </div>
 
@@ -1262,6 +1262,12 @@
 
                                         <div class="row">
                                             <div class="answer-holder col-md-10 col-md-offset-2">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input" name="step6Q3-checkbox" id="step6Q3-checkbox" value="Nothing to add">
+                                                        Nothing to add
+                                                    </label>
+                                                </div>
                                                 <label for="step6Q3"></label>
                                                 <textarea id="step6Q3" name="step6Q3" class="form-control" rows="5"></textarea>
                                             </div>
@@ -1276,8 +1282,8 @@
                             </div>
 
                             <div class="finish-message hidden">
-                                <h1 class="text-center">Thank!</h1>
-                                <p class="text-center">Some description!</p>
+                                <h1 class="text-center">Thank you for taking this survey.</h1>
+                                <!--<p class="text-center">Some description!</p>-->
                             </div>
 
                         </div>
@@ -1289,8 +1295,8 @@
                 <div id="terminate-message" class="message hidden">
                     <div class="container">
                         <div class="jumbotron hero-spacer">
-                            <h1>Or show some content like this!</h1>
-                            <p>This is small description...</p>
+                            <h1>Sorry, but your profile doesn’t fit our survey requirements.</h1>
+                            <!--<p>This is small description...</p>-->
                         </div>
                     </div>
                 </div>
@@ -1377,6 +1383,8 @@
 
     <!-- Scripts -->
     <script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./bower_components/jquery.inputmask/dist/jquery.inputmask.bundle.js"></script>
+    <script type="text/javascript" src="./bower_components/jquery.inputmask/dist/min/inputmask/inputmask.regex.extensions.min.js"></script>
     <script type="text/javascript" src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./assets/js/App.js"></script>
     <script type="text/javascript" src="./assets/js/main.js"></script>

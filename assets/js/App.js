@@ -46,7 +46,7 @@ App.prototype.PerFormDependInit = function () {
         //if this person not for us
         if ( !self.accessToSurveyStepsForm )
         {
-            $('#terminate-modal').modal();
+            //$('#terminate-modal').modal();
             $('#terminate-message').removeClass('hidden');
             return;
         }
@@ -135,6 +135,13 @@ App.prototype.step2FormDependInit = function () {
         });
     }
 
+    $.each(
+        $form.find('.question-5 input'),
+        function (i, el) {
+            $(el).inputmask('Regex', { regex: "^[1-9][0-9]?$|^100$" });
+        }
+    );
+
     $form.find('button[type="submit"]').click(function (e) {
         self.surveyFormSubmitAction( $form );
     });
@@ -194,17 +201,25 @@ App.prototype.step5FormDependInit = function () {
 };
 App.prototype.step6FormDependInit = function () {
     var $form = $('form#step6'),
+        firstQ_val,
+        mess = '<h3>Please, describe in additional comments - why?</h3>',
         self = this;
 
     $form.find('input[name=step6Q1-radio]').on('change', function () {
-        var val = $form.find('input[name=step6Q1-radio]:checked').val();
-        if (val == 'I have no idea') {
-            var mess = '<h3>Please describe in additional comments - why?</h3>';
+        firstQ_val = $form.find('input[name=step6Q1-radio]:checked').val();
+        if (firstQ_val == 'Yes') {
             self.showValidationErrorModal(mess);
         }
     });
 
     $form.find('button[type="submit"]').click(function (e) {
+        var addComm = $form.find('#step6Q1-comments').val();
+        if (firstQ_val == 'Yes' && (addComm == '') ) {
+            self.showValidationErrorModal(
+                '<h3>First question "Additional comments" is empty!</h3><br><p>Please, fix this.</p>'
+            );
+            return;
+        }
         self.surveyFormSubmitAction( $form );
     });
 };
